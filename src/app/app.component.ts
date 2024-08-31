@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) { }
   buscarColonia(){
     if(this.codigoPostal){
-      this.http.get<any[]>(`http://localhost:3000/data?cp=${this.codigoPostal}`).subscribe(
+      this.http.get<any[]>(`http://127.0.0.1:3000/data?cp=${this.codigoPostal}`).subscribe(
         response => {
           this.colonias = response;
           if(response.length > 0){
